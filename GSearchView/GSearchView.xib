@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Regular.otf">
+            <string>SFProDisplay-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" verticalCompressionResistancePriority="250" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="60" translatesAutoresizingMaskIntoConstraints="NO" id="iN0-l3-epB" customClass="GSearchView" customModule="iOS3" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sku-Lm-Dbj">
+                    <rect key="frame" x="15" y="10" width="384" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DIy-vi-oaF">
+                            <rect key="frame" x="352" y="8" width="24" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="24" id="PDn-xv-WJb"/>
+                                <constraint firstAttribute="height" constant="24" id="bqf-OP-Ovg"/>
+                            </constraints>
+                            <state key="normal" image="find_black"/>
+                        </button>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Метро, улица, отделение" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sQN-4n-1DI">
+                            <rect key="frame" x="12" y="3" width="332" height="34"/>
+                            <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="15"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="DIy-vi-oaF" firstAttribute="top" secondItem="Sku-Lm-Dbj" secondAttribute="top" constant="8" id="937-Q9-er2"/>
+                        <constraint firstItem="sQN-4n-1DI" firstAttribute="top" secondItem="Sku-Lm-Dbj" secondAttribute="top" constant="3" id="9qZ-P1-143"/>
+                        <constraint firstItem="DIy-vi-oaF" firstAttribute="leading" secondItem="sQN-4n-1DI" secondAttribute="trailing" constant="8" id="JWw-WG-rp5"/>
+                        <constraint firstAttribute="bottom" secondItem="sQN-4n-1DI" secondAttribute="bottom" constant="3" id="Lf2-42-c5z"/>
+                        <constraint firstAttribute="bottom" secondItem="DIy-vi-oaF" secondAttribute="bottom" constant="8" id="QZI-os-xIO"/>
+                        <constraint firstAttribute="trailing" secondItem="DIy-vi-oaF" secondAttribute="trailing" constant="8" id="eDb-Bo-gf4"/>
+                        <constraint firstAttribute="height" constant="40" id="eLa-KY-4HZ"/>
+                        <constraint firstItem="sQN-4n-1DI" firstAttribute="leading" secondItem="Sku-Lm-Dbj" secondAttribute="leading" constant="12" id="jvM-Va-L5Q"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zkt-E6-a9G">
+                    <rect key="frame" x="15" y="50" width="384" height="0.0"/>
+                    <color key="backgroundColor" red="0.92549890280000002" green="0.92547893520000002" blue="0.92548292880000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" id="Q6f-zM-eUt"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LRH-Ru-n6a">
+                    <rect key="frame" x="15" y="50" width="384" height="0.0"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="Zkt-E6-a9G" firstAttribute="top" secondItem="Sku-Lm-Dbj" secondAttribute="bottom" id="4E1-Xa-drK"/>
+                <constraint firstItem="Zkt-E6-a9G" firstAttribute="trailing" secondItem="Sku-Lm-Dbj" secondAttribute="trailing" id="6Ap-k0-gKH"/>
+                <constraint firstAttribute="bottom" secondItem="LRH-Ru-n6a" secondAttribute="bottom" constant="10" id="EEh-jQ-eGZ"/>
+                <constraint firstItem="LRH-Ru-n6a" firstAttribute="trailing" secondItem="Zkt-E6-a9G" secondAttribute="trailing" id="V6a-8Y-YiU"/>
+                <constraint firstAttribute="trailing" secondItem="Sku-Lm-Dbj" secondAttribute="trailing" constant="15" id="W8E-E3-gHE"/>
+                <constraint firstItem="LRH-Ru-n6a" firstAttribute="leading" secondItem="Zkt-E6-a9G" secondAttribute="leading" id="eja-wb-vnO"/>
+                <constraint firstItem="LRH-Ru-n6a" firstAttribute="top" secondItem="Zkt-E6-a9G" secondAttribute="bottom" id="foZ-O9-3c5"/>
+                <constraint firstItem="Sku-Lm-Dbj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="h6z-sT-PSv"/>
+                <constraint firstItem="Sku-Lm-Dbj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="nr7-Sg-JTp"/>
+                <constraint firstItem="Zkt-E6-a9G" firstAttribute="leading" secondItem="Sku-Lm-Dbj" secondAttribute="leading" id="s2M-3H-YCd"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="containerView" destination="Sku-Lm-Dbj" id="Fc3-mM-GL3"/>
+                <outlet property="dividerView" destination="Zkt-E6-a9G" id="74T-MD-aQ2"/>
+                <outlet property="dividerViewHeightConstraint" destination="Q6f-zM-eUt" id="f1W-le-WZZ"/>
+                <outlet property="searchButton" destination="DIy-vi-oaF" id="XwW-3p-alK"/>
+                <outlet property="tableView" destination="LRH-Ru-n6a" id="HtE-Os-t19"/>
+                <outlet property="textField" destination="sQN-4n-1DI" id="CO9-Ar-Fcc"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="-121.20535714285714"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="find_black" width="24" height="24"/>
+    </resources>
+</document>
